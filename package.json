@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "start:dev": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Vaibhav Pathak",
   "license": "ISC",
@@ -26,8 +25,5 @@
     "passport-google-oauth": "^2.0.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.19"
   }
 }
