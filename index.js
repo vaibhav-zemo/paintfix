@@ -18,6 +18,8 @@ const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const customWare = require('./config/middleware');
 
+
+
 // View 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
@@ -44,7 +46,7 @@ app.use(session({
     },
     store: MongoStore.create(
         {
-            mongoUrl: 'mongodb://localhost/27017',
+            mongoUrl: 'mongodb+srv://vaibhavpathak:pathakvaibhav@cluster0.8lyrlym.mongodb.net/paintfix?retryWrites=true&w=majority',
             mongooseConnection: mongodb,
             autoRemove: 'disabled'
         }, function (err) {
