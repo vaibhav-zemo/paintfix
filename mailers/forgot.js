@@ -4,7 +4,6 @@ const mailer = require('../config/nodemailer');
 
 exports.forgot = async (mail) => {
     let User = await user.findOne({ email: mail });
-    // let acctoken = await reset_password.populate('user').exec();
     let password = await reset_password.findOne({ user: User });
 
     let htmlString = mailer.renderTemplate({ token: password }, '/forgot_mailer.ejs');
