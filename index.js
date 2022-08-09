@@ -66,7 +66,7 @@ app.use(customWare.setFlash);
 app.use('/',require('./routers'));
 
 // Listen
-app.listen(port, function (err) {
+app.listen(port || process.env.PORT, function (err) {
     if (err) {
         console.log("Error while creating server");
         return;
