@@ -1,9 +1,11 @@
 const express = require('express');
+const cors = require("cors");
+const dotenv = require("dotenv");
 const cookieParser = require('cookie-parser');
 
 const app = express();
-const port = 8000;
 const path = require('path');
+dotenv.config();
 
 const expresslayout = require('express-ejs-layouts');
 const mongodb = require('./config/mongoose');
@@ -31,6 +33,7 @@ app.use(express.urlencoded());
 app.use(express.static('assets'));
 
 app.use(expresslayout);
+app.use(cors());
 app.use(cookieParser());
 
 app.set('layout extractStyles', true);
@@ -66,10 +69,5 @@ app.use(customWare.setFlash);
 app.use('/',require('./routers'));
 
 // Listen
-app.listen(port || process.env.PORT, function (err) {
-    if (err) {
-        console.log("Error while creating server");
-        return;
-    }
-    console.log("Server is running at port: ", port);
-});
+const port = process.env.PORT || 8000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));

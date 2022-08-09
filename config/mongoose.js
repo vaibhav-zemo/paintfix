@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 const DB = 'mongodb+srv://vaibhavpathak:pathakvaibhav@cluster0.8lyrlym.mongodb.net/paintfix?retryWrites=true&w=majority';
 
-mongoose.connect(DB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}, {
-}).then(() => {
+mongoose.connect(DB,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+}).then(()=>{
     console.log("DB Connected");
-}).catch((err) => console.log(err));
+}).catch((err)=> console.log(err));
