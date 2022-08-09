@@ -1,0 +1,27 @@
+<header>
+    <h1>
+        <a href="/">
+            PaintFix
+        </a>
+    </h2>
+    <ul>
+        <% if(locals.user) {%>
+            <div>                
+                <a href="/user/sign_out">
+                    Sign Out
+                </a>
+            </div>
+            <%}else{%>
+                <li>
+                    <a href="/user/sign_in">
+                        Sign In
+                    </a>
+                </li>
+                <li>
+                    <a href="/user/sign_up">
+                        Sign Up
+                    </a>
+                </li>
+            <%}%>
+    </ul>
+</header>
