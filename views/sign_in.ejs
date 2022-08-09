@@ -1,25 +1,26 @@
 <link rel="stylesheet" href="css/sign_in.css">
 
-<div id="sign_in_box">
-    <h1>Sign In</h1>
+<div id="main_box">
+    <div id="sign_in_box">
+        <h1>Sign In</h1>
 
-    <form action="/user/create-session" method="post">
-        <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
-        <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
-        <input type="submit" value="Log In">
-    </form>
+        <form action="/user/create-session" method="post">
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+            <input type="submit" value="Log In">
+        </form>
 
 
-    <div id="last">
-        <p>
-            <a href="/user/auth/google">
-                Google SignIn/SignUp
-            </a>
-        </p>
-    
-        <p>
-            <a href="/user/forgot-password">Forgot Password</a>
-        </p>
+        <div id="last">
+            <p>
+                <a href="/user/auth/google">
+                    Google SignIn/SignUp
+                </a>
+            </p>
+
+            <p>
+                <a href="/user/forgot-password">Forgot Password</a>
+            </p>
+        </div>
     </div>
 </div>
-

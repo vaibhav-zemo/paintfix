@@ -2,21 +2,22 @@ footer {
   background-color: grey;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
-  position: absolute;
-  top: 50rem;
+  position: relative;
+  bottom: 0px;
 }
 
 footer #copy {
   display: flex;
   justify-content: center;
-  margin: 5px;
 }
 
 footer #link {
-  margin: 5px;
-  margin-left: 10px;
+  width: auto;
+  margin:  auto;
+  margin-bottom: -23px;
 }
 
 footer #link a {
