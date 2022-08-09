@@ -8,7 +8,7 @@ const forgot_mailer = require('../mailers/forgot');
 
 module.exports.sign_in = function (req, res) {
     if (req.isAuthenticated()) {
-        return res.redirect('/user/profile');
+        return res.redirect('/');
     }
     return res.render('sign_in', {
         title: 'Sign In'
@@ -17,7 +17,7 @@ module.exports.sign_in = function (req, res) {
 
 module.exports.sign_up = function (req, res) {
     if (req.isAuthenticated()) {
-        return res.redirect('/user/profile');
+        return res.redirect('/');
     }
     return res.render('sign_up', {
         title: 'Sign Up'
@@ -102,7 +102,7 @@ module.exports.create_user = async function (req, res) {
 
         if (!users) {
             user.create(req.body, function (err, data) {
-                return res.redirect('/user/profile/data.id');
+                return res.redirect('/');
             });
         }
         else {
