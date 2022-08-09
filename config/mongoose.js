@@ -3,7 +3,6 @@ const DB = 'mongodb+srv://vaibhavpathak:pathakvaibhav@cluster0.8lyrlym.mongodb.n
 
 mongoose.connect(DB,{
     useNewUrlParser:true,
-    useUnifiedTopology:true,
 }).then(()=>{
     console.log("DB Connected");
 }).catch((err)=> console.log(err));
