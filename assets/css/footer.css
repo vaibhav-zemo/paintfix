@@ -5,14 +5,21 @@ footer {
   justify-content: center;
   width: 100%;
   position: absolute;
-  top: 50rem; }
-  footer #copy {
-    display: flex;
-    justify-content: center;
-    margin: 5px; }
-  footer #link {
-    margin: 5px;
-    margin-left: 10px; }
-    footer #link a {
-      text-decoration: none;
-      color: white; }
+  top: 50rem;
+}
+
+footer #copy {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+footer #link {
+  margin: 5px;
+  margin-left: 10px;
+}
+
+footer #link a {
+  text-decoration: none;
+  color: white;
+}

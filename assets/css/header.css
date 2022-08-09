@@ -1,32 +1,52 @@
 header {
   background-color: aquamarine;
   display: flex;
-  height: 65px; }
-  header h1 {
-    margin-left: 10px; }
-    header h1 a {
-      text-decoration: none;
-      color: white; }
-  header ul {
-    display: flex;
-    margin-left: 75%;
-    margin-top: 13px; }
-    header ul div {
-      font-size: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin-top: 10px;
-      margin-left: 95px; }
-      header ul div a {
-        text-decoration: none;
-        color: white; }
-    header ul li {
-      list-style: none;
-      margin: 10px; }
-      header ul li a {
-        color: white;
-        font-size: 2rem;
-        text-decoration: none;
-        font-size: 1.2rem; }
+  height: 65px;
+  width: 100%;
+  justify-content: space-between;
+  margin: auto;
+  overflow:hidden;
+}
+
+header h1 {
+  margin-left: 10px;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+header ul {
+  display: flex;
+  margin-top: 13px;
+  width: auto;
+  margin-right: 0px;
+}
+
+header ul div {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 95px;
+}
+
+header ul div a {
+  text-decoration: none;
+  color: white;
+}
+
+header ul li {
+  list-style: none;
+  margin: 10px;
+}
+
+header ul li a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
