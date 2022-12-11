@@ -3,10 +3,11 @@ const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
 
 const User = require('../models/user');
+require('dotenv').config();
 
 let opts = {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-    secretOrKey: 'paintfix',
+    secretOrKey: process.env.SECRET_KEY,
 }
 
 passport.use(new JWTStrategy(opts,function (jwtPayLoad,done) {

@@ -3,13 +3,14 @@ const googleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const crypto = require('crypto');
 const user = require('../models/user');
 const User = require('../models/user');
+require('dotenv').config();
 
 
 // tell passport to use a new strategy for google login
 passport.use(new googleStrategy({
-    clientID: "208500777192-8d98qe5bleqm9d8pck6010vtf69v1v8g.apps.googleusercontent.com",
-    clientSecret: "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",
-    callbackURL: "https://paintfix.herokuapp.com/user/auth/google/callback",
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL: process.env.CALL_BACK_URL,
 
 }, function (accessToken, refreshToken, profile, done) {
     // find user
