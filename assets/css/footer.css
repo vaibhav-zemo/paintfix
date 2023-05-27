@@ -12,12 +12,14 @@ footer {
 footer #copy {
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 footer #link {
   width: auto;
   margin:  auto;
   margin-bottom: -23px;
+  margin-top: 10px;
 }
 
 footer #link a {
